@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Users</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<ul>
+</ul>
+<th:block th:each="item,stat : ${items}">
+    <li th:text="${stat.index + 1} + '. ' + ${user.name} + ', ' + ${user.status}}"></li>
+</th:block>
+</body>
+</html>
